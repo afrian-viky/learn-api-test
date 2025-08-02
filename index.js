@@ -21,9 +21,6 @@ app.use('/users', userRoutes);
 pool.connect()
   .then(() => {
     console.log('Connected to PostgreSQL!');
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-    });
   })
   .catch((err) => {
     console.error('Database connection failed', err);
